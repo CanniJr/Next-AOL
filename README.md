@@ -37,4 +37,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 Notes on this app:
 
  - Used Styled Components
- - Material UI
+ - Material UI for icons
