@@ -38,3 +38,6 @@ Notes on this app:
 
  - Used Styled Components
  - Material UI for icons
+ - Google Firebase (Firestore, Authentication)
+ - React Firebase Hooks
+ - Email validator
