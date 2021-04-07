@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import {Button} from '@material-ui/core'
 
 function Login() {
     return (
@@ -8,7 +9,8 @@ function Login() {
             </Head>
 
             <LoginContainer>
-                <Logo />
+                <Logo src='' />
+                <Button variant='outlined'>Sign In</Button>
             </LoginContainer>
         </Container>
     )
