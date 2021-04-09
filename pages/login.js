@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import {Button} from '@material-ui/core'
 
+
 function Login() {
     return (
         <Container>
@@ -9,7 +10,8 @@ function Login() {
             </Head>
 
             <LoginContainer>
-                <Logo src='' />
+                <Logo src='https://logodownload.org/wp-content/uploads/2015/04/whatsapp-logo-1.png' />
+                
                 <Button variant='outlined'>Sign In</Button>
             </LoginContainer>
         </Container>
