@@ -1,3 +1,23 @@
+## WhatsApp Clone using Next.js and Google Firebase
+
+------------------------
+Notes on this app:
+
+ - Used Styled Components
+ - Material UI for icons
+ - Google Firebase (Firestore, Authentication)
+ - React Firebase Hooks
+ - Email validator
+ - Better React Spin Kit
+
+
+
+
+
+
+
+----------------------------------------------------------------
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -33,11 +53,3 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-------------------------
-Notes on this app:
-
- - Used Styled Components
- - Material UI for icons
- - Google Firebase (Firestore, Authentication)
- - React Firebase Hooks
- - Email validator
