@@ -7,9 +7,12 @@ import * as EmailValidator from 'email-validator'
 import { auth, db } from '../firebase';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useCollection } from 'react-firebase-hooks/firestore'
+import Chat from './Chat'
 
 function Sidebar() {
     const [user] = useAuthState(auth)
+    const userChatRef = db.collection('chats').where('users', 'array-contains', user.email)
+    const [chatsSnapshot] = useCollection(userChatRef);
 
     const createNewChat = () => {
         let input = prompt('Enter a contact email address to chat with...')
@@ -25,7 +28,9 @@ function Sidebar() {
     }
 
     const chatAlreadyExists = (recipientEmail) => {
-
+        !!chatsSnapshot?.docs.find(chat => 
+            chat.data().users.find(user => 
+                user === recipientEmail)?.length > 0)
     }
 
     return (
@@ -51,6 +56,9 @@ function Sidebar() {
             <SidebarButton onClick={createNewChat}>Start a new chat</SidebarButton>
 
             {/*Chat lists */}
+            {chatsSnapshot?.docs.map((chat) => (
+                <Chat key={chat.id} id={chat.id} users={chat.data().users} />
+            ))}
         </Container>
     )
 }
