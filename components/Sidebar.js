@@ -11,6 +11,7 @@ import Chat from './Chat'
 
 function Sidebar() {
     const [user] = useAuthState(auth)
+    console.log(user)
     const userChatRef = db.collection('chats').where('users', 'array-contains', user.email)
     const [chatsSnapshot] = useCollection(userChatRef);
 
@@ -36,7 +37,8 @@ function Sidebar() {
     return (
         <Container>
             <Header>
-                <UserAvatar onClick={() => auth.signOut()}/>
+                <UserAvatar src={user.photoURL} onClick={() => auth.signOut()}/>
+                <DisplayName>{user.displayName}</DisplayName>
 
                 <IconContainer>
                     <IconButton>
@@ -119,4 +121,8 @@ const SidebarButton = styled(Button)`
         border-bottom: 1px solid whitesmoke;
     }
 
+`
+
+const DisplayName = styled.p`
+    
 `
