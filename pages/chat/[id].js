@@ -36,6 +36,7 @@ export async function getServerSideProps(context){
             ...messages,
             timestamp: messages.timestamp.toDate().getTime(),
         }));
+        
 }
 
 const Container = styled.div`

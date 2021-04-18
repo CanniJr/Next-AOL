@@ -10,6 +10,8 @@ Notes on this app:
  - Email validator
  - Better React Spin Kit
 
+Using Cloud Firestore to manage users and chats between users
+
 
 
 
