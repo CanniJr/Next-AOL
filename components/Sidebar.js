@@ -11,7 +11,7 @@ import Chat from './Chat'
 
 function Sidebar() {
     const [user] = useAuthState(auth)
-    console.log(user)
+    // console.log(user)
     const userChatRef = db.collection('chats').where('users', 'array-contains', user.email)
     const [chatsSnapshot] = useCollection(userChatRef);
 
